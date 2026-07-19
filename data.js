@@ -110,39 +110,40 @@ Living in a world of temptation`
       note: "",
       artwork: "",
       lyrics: `Millions of people die
-      not knowing of the cause
-      their evil leards 
-      form all their wicked laws
-      They steal your money
-      and st you in your grave
-      youre scared to shit
-      but i aint no ones slave
       
-      My live, gone thru hell
-      High live, no can tell
-
-      Illegalize the cannibis
-      they dont know whay they do 
-      I think I'll kick it down
-      have myself some brew
-      blaze a LEN, nothing else  for me to do
-      look in the mirror... fuck it
-      I dont look like you.
-      ===
-      My life, Never Ends
-      High Life, Blaze the LEN
+not knowing of the cause
+their evil leaders 
+form all their wicked laws
+They steal your money
+and stick you in your grave
+youre scared to shit
+but i aint no ones slave
       
-      Recieve it from my bitch
-      she really knows her game
-      just one thing on my mind
-      I wish I knew her name
-      Shake hands with Uncle Jack
-      Another routine night
-      An empty bottle, and eyes 
-      without no sight
+My live, gone thru hell
+High live, no can tell
 
-      High Life, after all
-      My life, Alcohol `
+Illegalize the cannibis
+they dont know whay they do 
+I think I'll kick it down
+have myself some brew
+blaze a LEN, nothing else  for me to do
+look in the mirror... fuck it
+I dont look like you.
+
+My life, Never Ends
+High Life, Blaze the LEN
+      
+Recieve it from my bitch
+she really knows her game
+just one thing on my mind
+I wish I knew her name
+Shake hands with Uncle Jack
+Another routine night
+An empty bottle, and eyes 
+without no sight
+
+High Life, after all
+My life, Alcohol `
     },
     {
       id: "tastethesteel",
