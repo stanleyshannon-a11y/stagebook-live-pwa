@@ -39,7 +39,7 @@ h1 { margin-bottom: .2rem; font-size: clamp(2rem, 7vw, 3.4rem); }
 .status { margin-top: 1.25rem; color: var(--muted); font-size: .85rem; }
 .status.ready { color: #9fd89f; }
 
-.song-screen { padding: 0; display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; }
+.song-screen { height: 100vh; height: 100dvh; min-height: 0; padding: 0; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; overflow: hidden; }
 .song-header {
   z-index: 2; display: grid; grid-template-columns: 48px 1fr 48px; align-items: center; gap: .6rem;
   padding: max(.55rem, env(safe-area-inset-top)) .75rem .55rem; background: rgba(16,17,18,.96); border-bottom: 1px solid var(--line);
@@ -48,7 +48,7 @@ h1 { margin-bottom: .2rem; font-size: clamp(2rem, 7vw, 3.4rem); }
 .song-heading h1 { overflow: hidden; margin: 0; font-size: 1.15rem; text-overflow: ellipsis; white-space: nowrap; }
 .song-heading p { overflow: hidden; margin: .12rem 0 0; color: var(--muted); font-size: .75rem; text-overflow: ellipsis; white-space: nowrap; }
 .icon-button { width: 48px; height: 48px; border-radius: 12px; font-size: 1.35rem; }
-.lyrics-wrap { overflow: hidden; overscroll-behavior: none; scroll-behavior: smooth; touch-action: pan-x; }
+.lyrics-wrap { min-height: 0; overflow: hidden; overscroll-behavior: none; scroll-behavior: smooth; touch-action: pan-x; }
 .lyrics { max-width: 1050px; margin: 0 auto; padding: 1.4rem clamp(1rem, 4vw, 3rem) 2rem; }
 .song-art { display: block; width: min(45vw, 240px); aspect-ratio: 1; margin: .4rem auto 1.8rem; border-radius: 16px; object-fit: cover; }
 .lyrics pre {
@@ -56,7 +56,7 @@ h1 { margin-bottom: .2rem; font-size: clamp(2rem, 7vw, 3.4rem); }
   letter-spacing: .01em; white-space: pre-wrap; overflow-wrap: break-word;
 }
 .song-footer {
-  z-index: 2; display: grid; grid-template-columns: minmax(82px, 1fr) auto minmax(82px, 1fr); gap: .5rem; align-items: center;
+  z-index: 2; flex: none; display: grid; grid-template-columns: minmax(82px, 1fr) auto minmax(82px, 1fr); gap: .5rem; align-items: center;
   padding: .6rem .75rem max(.6rem, env(safe-area-inset-bottom)); background: rgba(16,17,18,.97); border-top: 1px solid var(--line);
 }
 .nav-button { min-height: 48px; padding: .65rem; border-radius: 12px; font-weight: 800; }
