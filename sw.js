@@ -1,7 +1,8 @@
-const CACHE_NAME = "stagebook-live-v1";
+const CACHE_NAME = "stagebook-live-v2";
 const APP_FILES = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.js", "./manifest.webmanifest",
-  "./assets/icon.svg", "./assets/sample-artwork.svg"
+  "./assets/icon.svg", "./assets/sample-artwork.svg",
+  "./beowulf/images/setlists/beowulfset.png"
 ];
 
 self.addEventListener("install", (event) => {
