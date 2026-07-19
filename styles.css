@@ -1,0 +1,74 @@
+:root {
+  color-scheme: dark;
+  --bg: #101112;
+  --panel: #191b1d;
+  --text: #f8f7f2;
+  --muted: #aaa9a3;
+  --accent: #ffb52e;
+  --line: #343638;
+  --lyric-size: clamp(1.85rem, 6.2vw, 3.7rem);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+button { font: inherit; }
+.app { min-height: 100dvh; }
+.screen { min-height: 100dvh; padding: max(1rem, env(safe-area-inset-top)) 1rem max(1rem, env(safe-area-inset-bottom)); }
+.home { max-width: 780px; margin: 0 auto; }
+.brand { display: grid; grid-template-columns: 92px 1fr; gap: 1rem; align-items: center; margin: 1rem 0 2rem; }
+.brand img { width: 92px; height: 92px; object-fit: cover; border-radius: 18px; background: var(--panel); }
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: .2rem; font-size: clamp(2rem, 7vw, 3.4rem); }
+.eyebrow, .muted { color: var(--muted); }
+.eyebrow { margin-bottom: .35rem; font-size: .78rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.setlist-grid { display: grid; gap: .75rem; }
+.setlist-card, .icon-button, .nav-button {
+  border: 1px solid var(--line); color: var(--text); background: var(--panel); cursor: pointer;
+}
+.setlist-card { width: 100%; padding: 1.15rem; border-radius: 14px; text-align: left; }
+.setlist-card strong { display: block; font-size: 1.35rem; margin-bottom: .25rem; }
+.setlist-card:active, .nav-button:active, .icon-button:active { transform: scale(.98); background: #24272a; }
+.status { margin-top: 1.25rem; color: var(--muted); font-size: .85rem; }
+.status.ready { color: #9fd89f; }
+
+.song-screen { padding: 0; display: grid; grid-template-rows: auto 1fr auto; overflow: hidden; }
+.song-header {
+  z-index: 2; display: grid; grid-template-columns: 48px 1fr 48px; align-items: center; gap: .6rem;
+  padding: max(.55rem, env(safe-area-inset-top)) .75rem .55rem; background: rgba(16,17,18,.96); border-bottom: 1px solid var(--line);
+}
+.song-heading { min-width: 0; text-align: center; }
+.song-heading h1 { overflow: hidden; margin: 0; font-size: 1.15rem; text-overflow: ellipsis; white-space: nowrap; }
+.song-heading p { overflow: hidden; margin: .12rem 0 0; color: var(--muted); font-size: .75rem; text-overflow: ellipsis; white-space: nowrap; }
+.icon-button { width: 48px; height: 48px; border-radius: 12px; font-size: 1.35rem; }
+.lyrics-wrap { overflow-y: auto; overscroll-behavior: contain; scroll-behavior: smooth; }
+.lyrics { max-width: 1050px; margin: 0 auto; padding: 1.4rem clamp(1rem, 4vw, 3rem) 45vh; }
+.song-art { display: block; width: min(45vw, 240px); aspect-ratio: 1; margin: .4rem auto 1.8rem; border-radius: 16px; object-fit: cover; }
+.lyrics pre {
+  margin: 0; color: var(--text); font: 750 var(--lyric-size)/1.42 system-ui, -apple-system, "Segoe UI", sans-serif;
+  letter-spacing: .01em; white-space: pre-wrap; overflow-wrap: break-word;
+}
+.song-footer {
+  z-index: 2; display: grid; grid-template-columns: 1fr auto 1fr; gap: .6rem; align-items: center;
+  padding: .6rem .75rem max(.6rem, env(safe-area-inset-bottom)); background: rgba(16,17,18,.97); border-top: 1px solid var(--line);
+}
+.nav-button { min-height: 48px; padding: .65rem; border-radius: 12px; font-weight: 800; }
+.nav-button:last-child { grid-column: 3; }
+.nav-button:disabled { opacity: .28; cursor: default; transform: none; }
+.counter { color: var(--muted); font-size: .8rem; text-align: center; }
+.size-controls { display: flex; gap: .35rem; }
+.size-controls .icon-button { width: 42px; height: 42px; }
+.hint { text-align: center; color: var(--muted); font-size: .72rem; margin: .45rem 0 0; }
+
+@media (min-width: 850px) {
+  .lyrics pre { --lyric-size: clamp(2.1rem, 4vw, 4rem); }
+  .setlist-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { .lyrics-wrap { scroll-behavior: auto; } }
