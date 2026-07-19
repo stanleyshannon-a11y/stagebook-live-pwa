@@ -15,7 +15,6 @@ window.STAGEBOOK_DATA = {
       note: "",
       artwork: "",
       lyrics: `Dropping, dropping, like flies
-
 We did shit together, we talked shit together
 Questioned everything, it was a part of life
 We shed blood together, we joined blood together
@@ -72,7 +71,6 @@ Tool her jewel`
       note: "",
       artwork: "",
       lyrics: `Living in a world of temptation
-
 Things look good to the eye, a mystical lie
 Souls, tampered from within, led into sin
 Blind, leading the blind, suckered every time
@@ -110,7 +108,6 @@ Living in a world of temptation`
       note: "",
       artwork: "",
       lyrics: `Millions of people die
-           
 not knowing of the cause
 their evil leaders 
 form all their wicked laws
@@ -179,7 +176,6 @@ How does it feel? To taste the steelOut`
       artwork: "",
       lyrics: `So, how did it taste? Ya? Good!
 How did it feel..? To taste the steel
-
 Did you enjoy the ditch? Bitch
 How is your Jaw? Cuz hte last time I saw
 a little twisted
