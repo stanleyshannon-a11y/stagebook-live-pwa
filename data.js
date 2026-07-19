@@ -110,7 +110,7 @@ Living in a world of temptation`
       note: "",
       artwork: "",
       lyrics: `Millions of people die
-      
+           
 not knowing of the cause
 their evil leaders 
 form all their wicked laws
