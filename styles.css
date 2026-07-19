@@ -48,15 +48,15 @@ h1 { margin-bottom: .2rem; font-size: clamp(2rem, 7vw, 3.4rem); }
 .song-heading h1 { overflow: hidden; margin: 0; font-size: 1.15rem; text-overflow: ellipsis; white-space: nowrap; }
 .song-heading p { overflow: hidden; margin: .12rem 0 0; color: var(--muted); font-size: .75rem; text-overflow: ellipsis; white-space: nowrap; }
 .icon-button { width: 48px; height: 48px; border-radius: 12px; font-size: 1.35rem; }
-.lyrics-wrap { overflow-y: auto; overscroll-behavior: contain; scroll-behavior: smooth; }
-.lyrics { max-width: 1050px; margin: 0 auto; padding: 1.4rem clamp(1rem, 4vw, 3rem) 45vh; }
+.lyrics-wrap { overflow: hidden; overscroll-behavior: none; scroll-behavior: smooth; touch-action: pan-x; }
+.lyrics { max-width: 1050px; margin: 0 auto; padding: 1.4rem clamp(1rem, 4vw, 3rem) 2rem; }
 .song-art { display: block; width: min(45vw, 240px); aspect-ratio: 1; margin: .4rem auto 1.8rem; border-radius: 16px; object-fit: cover; }
 .lyrics pre {
   margin: 0; color: var(--text); font: 750 var(--lyric-size)/1.42 system-ui, -apple-system, "Segoe UI", sans-serif;
   letter-spacing: .01em; white-space: pre-wrap; overflow-wrap: break-word;
 }
 .song-footer {
-  z-index: 2; display: grid; grid-template-columns: 1fr auto 1fr; gap: .6rem; align-items: center;
+  z-index: 2; display: grid; grid-template-columns: minmax(82px, 1fr) auto minmax(82px, 1fr); gap: .5rem; align-items: center;
   padding: .6rem .75rem max(.6rem, env(safe-area-inset-bottom)); background: rgba(16,17,18,.97); border-top: 1px solid var(--line);
 }
 .nav-button { min-height: 48px; padding: .65rem; border-radius: 12px; font-weight: 800; }
@@ -70,5 +70,10 @@ h1 { margin-bottom: .2rem; font-size: clamp(2rem, 7vw, 3.4rem); }
 @media (min-width: 850px) {
   .lyrics pre { --lyric-size: clamp(2.1rem, 4vw, 4rem); }
   .setlist-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 430px) {
+  .song-footer { padding-left: .4rem; padding-right: .4rem; }
+  .nav-button { padding-left: .35rem; padding-right: .35rem; font-size: .82rem; }
+  .counter { font-size: .67rem; }
 }
 @media (prefers-reduced-motion: reduce) { .lyrics-wrap { scroll-behavior: auto; } }

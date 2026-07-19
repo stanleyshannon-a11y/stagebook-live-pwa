@@ -7,6 +7,7 @@ A separate, dependency-free, offline-first lyrics and setlist app designed for f
 - One band with replaceable sample content
 - Multiple setlists and large, high-contrast lyrics
 - Horizontal swipe, Previous/Next buttons, and keyboard navigation
+- One-screen lyric paging with a visible page count and page-turner controls
 - Per-song artwork support
 - Adjustable lyric size (the `A−` button cycles through four sizes and remembers the choice)
 - Installable standalone PWA with all app files cached locally
@@ -50,8 +51,9 @@ After changing any deployed file, change `CACHE_NAME` near the top of `sw.js` (f
 
 ## Stage controls
 
-- Swipe left/right over the lyrics or use the large footer buttons.
-- Keyboard: Right arrow or Space = next; Left arrow = previous; Escape = setlists.
+- Swipe left/right over the lyrics or use the large left/right footer buttons.
+- Left/right advances one lyric page; at a song boundary it moves to the adjacent song.
+- Keyboard: Right/Left arrows turn pages; Escape returns to setlists.
 - Tap `A−` repeatedly to cycle lyric sizes.
 - Lyrics scroll vertically without triggering an accidental song change; a swipe must be clearly horizontal.
 
