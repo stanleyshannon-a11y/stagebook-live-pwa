@@ -60,7 +60,10 @@
         <header class="song-header">
           <button class="icon-button" id="back" aria-label="Back to setlists">‹</button>
           <div class="song-heading"><h1>${escapeHtml(song.title)}</h1><p>${escapeHtml(song.note || currentSetlist.name)}</p></div>
-          <div class="size-controls" aria-label="Text size"><button class="icon-button" id="smaller" aria-label="Smaller lyrics">A−</button></div>
+          <div class="size-controls" aria-label="Display controls">
+            <button class="icon-button fullscreen-button" id="fullscreen" aria-label="Enter full screen">Full</button>
+            <button class="icon-button" id="smaller" aria-label="Change lyric size">A−</button>
+          </div>
         </header>
         <div class="lyrics-wrap" id="lyrics-wrap">
           <article class="lyrics">
@@ -81,6 +84,7 @@
     document.querySelector("#previous").addEventListener("click", () => turnStagePage(-1));
     document.querySelector("#next").addEventListener("click", () => turnStagePage(1));
     document.querySelector("#smaller").addEventListener("click", changeFontSize);
+    document.querySelector("#fullscreen").addEventListener("click", enterFullscreen);
     const lyrics = document.querySelector("#lyrics-wrap");
     lyrics.addEventListener("touchstart", startSwipe, { passive: true });
     lyrics.addEventListener("touchend", endSwipe, { passive: true });
@@ -143,6 +147,14 @@
     fontScale = sizes[(sizes.findIndex((size) => size >= fontScale) + 1) % sizes.length];
     localStorage.setItem("stagebook-font-scale", fontScale);
     applyFontScale();
+  }
+
+  function enterFullscreen() {
+    const requestFullscreen =
+      document.documentElement.requestFullscreen ||
+      document.documentElement.webkitRequestFullscreen;
+    if (!requestFullscreen) return;
+    requestFullscreen.call(document.documentElement).catch(() => {});
   }
   function applyFontScale() {
     const text = document.querySelector("#lyrics-text");

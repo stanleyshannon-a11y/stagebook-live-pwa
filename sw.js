@@ -1,4 +1,4 @@
-const CACHE_NAME = "stagebook-live-v5";
+const CACHE_NAME = "stagebook-live-v6";
 const APP_FILES = [
   "./", "./index.html", "./styles.css", "./app.js", "./data.js", "./manifest.webmanifest",
   "./assets/icon.svg", "./assets/sample-artwork.svg",
